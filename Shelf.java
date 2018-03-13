@@ -8,14 +8,14 @@ public class Shelf{
     
     public Shelf(String name){
         this.name = name;
-        setNumberOfCompartments(5);
+        // setNumberOfCompartments(5);
     }
 
     public String getName(){
         return this.name;
     }
 
-    public void setNumberOfCompartments(int compartment){
+    public void addNumberOfCompartments(int compartment){
         for(int i = 0; i < compartment; i++){
             String numericId = lazily.getAnOrderedNumber();
             lazily.setNextAnOrderedNumber();

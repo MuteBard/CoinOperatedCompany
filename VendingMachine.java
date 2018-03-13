@@ -1,25 +1,22 @@
 import java.util.ArrayList;
-public class SnackMachine{
+
+public class VendingMachine{
 
     private String id;
     private ArrayList<Shelf> shelfList= new ArrayList<Shelf>();
     private RandomStuffMaker lazily = new RandomStuffMaker();
 
-    private SnackDistributor sD = new SnackDistributor();
-    private ArrayList<Product> sDList = sD.getSnacks();
 
-    
-
-    public SnackMachine(String id){
+    public VendingMachine(String id){
         this.id = id;
-        // setNumberOfShelves(5);
+        // setNumberOfShelves(shelves);
     }
 
     public String getId(){
         return this.id;
     }
 
-    public void addNumberOfShelves(int shelves){
+    public void setNumberOfShelves(int shelves){
         for(int i = 0; i < shelves; i++){
             String alphabetId = lazily.getCurrentCharacter();
             lazily.setNextOrderedAlphabeticalCharacter();
@@ -30,17 +27,6 @@ public class SnackMachine{
     public ArrayList<Shelf> ListAllShelves(){
         return this.shelfList;
     }
-
-    public void restock(){
-        int i = 0;
-        for(Shelf shelf : this.shelfList){
-            for(Compartment compartment : shelf.ListCompartments()){
-                compartment.setSize(10);
-                compartment.addProduct(sDList.get(i));
-                i++;
-            }
-        }
-    }
     
     public String toStringShelves(){
         String str = "";
@@ -50,5 +36,6 @@ public class SnackMachine{
         str += "\n";
         return str;
     }
+
 
 }

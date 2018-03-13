@@ -9,23 +9,23 @@ public class Location{
 
     public Location(String name){
         this.name = name;
-        setSnackMachines();
-        setDrinkMachines();
+        // setSnackMachines();
+        // setDrinkMachines();
     }
 
     public String getName(){
         return this.name;
     }
 
-    public void setSnackMachines(){
-        for(int i = 0; i < 5; i++){
+    public void addSnackMachines(int num){
+        for(int i = 0; i < num; i++){
             String randStr = lazily.getRandom6Characters();
             (this.sMList).add(new SnackMachine(randStr));
         }
 
     }
-    public void setDrinkMachines(){
-        for(int i = 0; i < 5; i++){
+    public void addDrinkMachines(int num){
+        for(int i = 0; i < num; i++){
             String randStr = lazily.getRandom6Characters();
             (this.dMList).add(new DrinkMachine(randStr));
         }   
