@@ -27,6 +27,28 @@ public class Tester{
                 }
             }
         }
+        DrinkDistributor cans = new DrinkDistributor("canned");
+        for(Product c : cans.getCannedDrinks()){
+            System.out.println(c.getName());
+        }
+        
+        
+        DrinkDistributor bottles = new DrinkDistributor("bottled");
+        for(Product b : bottles.getBottledDrinks()){
+            System.out.println(b.getName());
+        }
+        
+        
+        SnackDistributor snacks = new SnackDistributor();
+        for(Product s : snacks.getSnacks()){
+            System.out.println(s.getName());
+        }
+
+        System.out.println("-----------------------");
+        
+        System.out.println(cans.getCannedDrink(0));
+        System.out.println(bottles.getBottledDrink(0));
+        System.out.println(snacks.getSnack(0));
     }
 }
 
