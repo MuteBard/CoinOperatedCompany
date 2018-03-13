@@ -1,0 +1,12 @@
+Company.class
+Compartment.class
+Distributor.class
+DrinkDistributor.class
+DrinkMachine.class
+Location.class
+Product.class
+RandomStuffMaker.class
+Shelf.class
+SnackDistributor.class
+SnackMachine.class
+Tester.class
